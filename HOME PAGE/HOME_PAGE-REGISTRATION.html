@@ -1,0 +1,142 @@
+<! doctype html>
+<html>
+<head>
+<title>REGISTRATION FORM</title>
+<link rel="stylesheet" href="reg.css">
+</head>
+<script>
+  function validate(){
+  var f=document.getElementById("fname").value;
+   var u=document.getElementById("uname").value;
+    var m=document.getElementById("mname").value;
+     var e=document.getElementById("ename").value;
+	  var p=document.getElementById("pname").value;
+	   var cp=document.getElementById("cpname").value;
+  
+  var cw=/^[A-Za-z]+$/;
+
+ if(f.match(cw)){
+	true;
+}
+else{
+	document.getElementById("msg").innerHTML="** USER NAME MUST BE IN CHARACTER";
+  return false;
+}
+
+if(f=="")
+ {
+  document.getElementById("msg").innerHTML="** NO BLANKS ALLOWS";
+  return false;
+ }
+ else if(u=="")
+ {
+  document.getElementById("msg1").innerHTML="** NO BLANKS ALLOWS";
+  return false;
+ }
+
+else if(m=="")
+ {
+  document.getElementById("msg2").innerHTML="** NO BLANKS ALLOWS";
+  return false;
+ }
+else if(m.length >10 || m.length< 10)
+ {
+  document.getElementById("msg2").innerHTML="** mobile no should be 10 digit";
+  return false;
+ }
+else if(e=="")
+ {
+  document.getElementById("msg3").innerHTML="** NO BLANKS ALLOWS";
+  return false;
+ }
+else if(e.indexOf('@')<=0){
+ document.getElementById("msg3").innerHTML="** INVALID EMAIL";
+  return false;
+}
+
+else if((e.charAt(e.length-4)!='.') && (e.charAt(e.length-3)!='.')){
+ document.getElementById("msg3").innerHTML="** INVALID EMAIL";
+  return false;
+}
+else if(p=="")
+ {
+  document.getElementById("msg4").innerHTML="** NO BLANKS ALLOWS";
+  return false;
+ }
+else if(cp=="")
+ {
+  document.getElementById("msg5").innerHTML="** NO BLANKS ALLOWS";
+  return false;
+ }
+else if(p!=cp)
+{
+  document.getElementById("msg5").innerHTML="** PASSWORD SHOULD BE SAME";
+  return false;
+}
+
+else if(p<6)
+{
+  document.getElementById("msg5").innerHTML="** PASSWORD SHOULD BE greter than 6";
+  return false;
+}
+
+	
+}
+</script>
+
+
+
+<body>
+<div class="head">
+  <h1 style="color:purple"><marquee dir="down">REGISTRATION FORM</marquee></h1>
+</div>
+
+ <div class="container">
+  <div class="title"><b>REGISTRATION</b></div><br>
+  <br>
+  <form action="#">
+   <div<class="user-details">
+    <div class="input-box">
+	 <b>FULL NAME : </b>
+	 <input type="text" id="fname" placeholder="enter a full name" required>
+	 <span id="msg" style="color:red"> </span>
+	 <br>
+	 <br>
+	</div>
+	  <div class="input-box">
+	 <b>USER NAME : </b>
+	 <input type="text" id="uname" placeholder="enter a user name" required>
+	 <span id="msg1" style="color:red"> </span>
+	 <br>
+	 <br>
+	</div>  <div class="input-box">
+	 <b>MOBILE NO : </b>
+	 <input type="number" id="mname" placeholder="enter a mobile no" required>
+	 <span id="msg2" style="color:red"> </span>
+	 <br>
+	 <br>
+	</div>  <div class="input-box">
+	 <b>EMAIL ID: </b>
+	 <input type="text" id="ename" placeholder="enter a email id" required>
+	 <span id="msg3" style="color:red"> </span>
+	 <br>
+	 <br>
+	</div>  <div class="input-box">
+	 <b>PASSWORD: </b>
+	 <input type="password" id="pname" placeholder="enter a password" required>
+	 <span id="msg4" style="color:red"> </span>
+	 <br>
+	 <br>
+	</div>  <div class="input-box">
+	 <b>CONFIRM PASSWORD : </b>
+	 <input type="password" id="cpname" placeholder="enter a confirm password" required>
+	 <span id="msg5" style="color:red"> </span>
+	 <br>
+	 <br>
+	</div>
+	<input type="submit" value="SUBMIT" onclick="return validate()">
+
+</div>
+</form>	
+</body>
+</html>
