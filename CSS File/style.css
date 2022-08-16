@@ -1,0 +1,107 @@
+body{
+background-image:url(image/bghome3.jpg);
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%;
+}
+
+h2{
+  color:white;
+  background:black;
+}
+.h1{
+	color:orange;
+}
+.myDiv {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+}
+
+h3{
+  color:black;
+  text-align:center;
+ 
+}
+.menu-bar{
+	background-color:black;
+	height:60px;
+	width: 80%;
+	display;flex;
+	
+	justify-content:space-between;
+	padding:0 60%;
+	
+}
+.menu-bar ul{
+	list-style:none;
+	display:flex;
+}
+.menu-bar ul li{
+	padding :20px 30px;
+}
+.menu-bar ul li a{
+	color:white;
+}
+
+
+.discover{
+	 padding:30px 50%;
+	 font-size:50;
+	
+}
+.top{
+	background-image:url('C:\Users\SAURABH\OneDrive\Desktop\nature image\background.jpg');
+	
+}
+.h1{
+	color:orange;
+}
+.row column h3{
+	
+	 background-image: url("C:\Users\SAURABH\OneDrive\Desktop\campus.jfif");
+	 height:200px;
+	 width:25%;
+}
+
+
+
+.head{
+	text-align:center;
+}
+
+.container{
+	max-width:1170px;
+	background-color:gray;
+	margin:auto;
+}
+
+.row{
+	display:flex;
+	flex-wrap:wrap;
+}
+ul{
+	list-style:none;
+}
+
+/**
+{
+	margin:0;
+	padding:0;
+	color: #d9d9d9;
+	box-sizing:border-box;
+	font-family:'Poppins', sans-serif;
+}*/
+footer{
+	
+	bottom: 0px;
+	width:100%;
+	background : #955;
+}
+.main-content{
+	display:flex;
+}
+.main-content .box{
+	flex-basis:50%;
+	padding: 10px 20px;
+}

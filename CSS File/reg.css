@@ -1,0 +1,38 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	
+	
+}
+
+
+body {
+	
+	display:flex;
+	justify-content:center;
+    align-items: center;
+	background: linear-gradient(150deg, #95d8a6, #8a82b5)
+}
+.body head{
+	align-items:center;
+}
+.container{
+	max-width:600px;
+	width:100%;
+	background:white;
+	padding:25px 30px;
+	border-radius:15px;
+}
+.container title{
+	font-size: 25px;
+	font-weight:500;
+}
+.user details .input-box {
+	height:45px;
+	width:100%;
+}
+.title{
+	color:red;
+	font-size:20px;
+}
